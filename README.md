@@ -73,7 +73,7 @@ Big Numbers
 
 Each number passed to the constructor **cannot be negative**. Hashids `encode()` function will return an empty string if at least one of the numbers is out of bounds. Be sure to check for that -- no exception is thrown. Maximum number is **int(2147483647)** on 32-bit systems and **int(9223372036854775807)** on 64-bit.
 
-Speed (FIXME: this section is about PHP implementation)
+Speed (FIXME: this section is about the PHP implementation)
 -------
 
 Even though speed is an important factor of every hashing algorithm, primary goal here was encoding several numbers at once while avoiding collisions.
@@ -94,8 +94,8 @@ On a *2.7 GHz Intel Core i7 with 16GB of RAM*, it takes roughly:
 
 Difference between hashids.php and hashids.hack
 -------
-This Hack implementation is faster by 11% than the PHP implementation.
-You must pass an **array** to `encode()` function in hashids.hack, i.e. ```$hashids->encode([100000])``` instead of ```$hashids->encode(100000)```.
+ - This Hack implementation is faster by 11% than the PHP implementation if both of them are running on HHVM.
+ - You must pass an **array** to `encode()` function in hashids.hack, i.e. ```$hashids->encode([100000])``` instead of ```$hashids->encode(100000)```.
 
 Notes
 -------
