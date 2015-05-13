@@ -1,0 +1,30 @@
+{
+	"name": "hashids/hashids-hack",
+	"type": "library",
+	"description": "Generate hashids like YouTube or Bitly from numbers to obfuscate your database primary ids, or navigate to the right shard.",
+	"keywords": ["hashids", "hashid", "hash", "ids", "youtube", "bitly", "encrypt", "decrypt", "obfuscate"],
+	"homepage": "https://github.com/arzeth/hashids-hack",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Ivan Akimov",
+			"email": "ivan@barreleye.com",
+			"homepage": "https://twitter.com/IvanAkimov"
+		},
+		{
+			"name": "Artem Chudinov",
+			"email": "arzeth0@gmail.com"
+		}
+	],
+	"require": {
+		"hhvm": ">=3.5"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "3.7.*"
+	},
+	"autoload": {
+		"psr-0": {
+			"Hashids": "lib/"
+		}
+	}
+}
