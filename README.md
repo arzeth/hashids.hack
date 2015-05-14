@@ -8,8 +8,6 @@ Full Documentation
 
 A small Hack class to generate YouTube-like ids from numbers. Read documentation at [http://hashids.org/php](http://hashids.org/php)
 
-[![hashids](https://api.travis-ci.org/arzeth/hashids.hack.svg "Hashids")](https://travis-ci.org/arzeth/hashids.hack)
-
 Example Usage
 -------
 
