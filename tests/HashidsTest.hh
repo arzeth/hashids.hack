@@ -1,8 +1,6 @@
 <?hh // partial
 
-/* hhvm /usr/bin/phpunit tests/HashidsTest.hh */
-require(__DIR__ . '/../lib/Hashids/HashGenerator.hh');
-require(__DIR__ . '/../lib/Hashids/Hashids.hh');
+/* hhvm vendor/bin/phpunit tests/HashidsTest.hh */
 
 class HashidsTest extends \PHPUnit_Framework_TestCase {
 
