@@ -346,7 +346,7 @@ class Hashids implements HashGenerator {
 
 			array_unshift($hash, $alphabet[$input % $this->_alphabet_length]);
 
-			$input = gmp_intval(gmp_div($input, $this->_alphabet_length));
+			$input = \gmp_intval(\gmp_div($input, $this->_alphabet_length));
 			//$input = (int)($input / $this->_alphabet_length);
 
 		} while ($input !== 0);
@@ -357,7 +357,7 @@ class Hashids implements HashGenerator {
 
 	private function _unhash(string $input, array<int> $alphabet): int {
 
-		$number = gmp_init(0);
+		$number = \gmp_init(0);
 		$input_len = strlen($input);
 		if ($input_len && $alphabet) {
 
@@ -367,7 +367,7 @@ class Hashids implements HashGenerator {
 			foreach ($input_chars as $i => $char) {
 
 				$pos = array_search(ord($char), $alphabet);
-				$number = gmp_add(
+				$number = \gmp_add(
 					$number,
 					$pos * pow($alphabet_length, ($input_len - $i - 1))
 				);
@@ -377,6 +377,6 @@ class Hashids implements HashGenerator {
 
 		}
 
-		return gmp_intval($number);
+		return \gmp_intval($number);
 	}
 }
