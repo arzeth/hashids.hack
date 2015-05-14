@@ -1,0 +1,12 @@
+language: php
+
+php:
+    - "hhvm"
+    - "hhvm-nightly"
+
+before_script:
+    - composer install --dev
+  
+script:
+    - hh_server --check .
+    - hhvm vendor/bin/phpunit tests/HashidsTest.hh
