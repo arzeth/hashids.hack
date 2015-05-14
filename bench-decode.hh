@@ -1,14 +1,13 @@
 <?hh
-require(__DIR__ . '/lib/Hashids/HashGenerator.hh');
-require(__DIR__ . '/lib/Hashids/Hashids.hh');
+require(__DIR__ . '/vendor/autoload.php');
 
 $hashids = new \Hashids\Hashids(
 	'm5QxG7MsGMJ2ZNwkv2xp2p'
 );
 
 
-define('MAX', $hashids->get_max_int_value());
-$bench_against = $hashids->encode([$hashids->get_max_int_value() - 1000]);
+$MAX = $hashids->get_max_int_value();
+$bench_against = $hashids->encode([$MAX - 1000]);
 $bench = microtime(true);
 
 for ($i = 0; $i < 300000; $i++)
