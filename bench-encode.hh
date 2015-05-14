@@ -7,14 +7,15 @@ $hashids = new \Hashids\Hashids(
 	'm5QxG7MsGMJ2ZNwkv2xp2p'
 );
 
-$bench_against = [$hashids->get_max_int_value() - 1000];
+
+define('MAX', $hashids->get_max_int_value());
 $bench = microtime(true);
 
-for ($i = 0; $i < 50000; $i++)
+for ($i = 0; $i < 300000; $i++)
 {
-	$o = $hashids->encode($bench_against);
+	$o = $hashids->encode([MAX - $i]);
 }
 
 $bench = microtime(true) - $bench;
-echo "Encoding of 50 000 hashes took {$bench} seconds. Don't forget that HHVM runs slower for the first time.";
+echo "Encoding of 300 000 hashes of a different numbers took {$bench} seconds. Don't forget that HHVM runs slower for the first time.";
 
