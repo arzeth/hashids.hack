@@ -139,7 +139,7 @@ class Hashids implements HashGenerator {
 
 		$ret = [];
 
-		
+
 		// ...Maybe it is faster when `trim` is in `if`
 		if (!($hash = trim($hash))) {
 			return $ret;
@@ -234,7 +234,7 @@ class Hashids implements HashGenerator {
 				$guard_index = ($numbers_hash_int + $ret[2]) % count($this->_guards);
 				$guard = $this->_guards[$guard_index];
 
-				array_unshift($ret, $guard);
+				array_push($ret, $guard);
 
 			}
 
