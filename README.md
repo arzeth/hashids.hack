@@ -103,6 +103,8 @@ Notes
 
 Changelog
 -------
+**1.0.6.2**
+- Fixed a serious bug.
 
 **1.0.6.1**
 - Initial Hack implementation (based on hashids.php by Ivan Akimov).

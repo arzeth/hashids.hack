@@ -1,7 +1,7 @@
 {
 	"name": "hashids/hashids.hack",
 	"description": "Generate hashids like YouTube or Bitly from numbers to obfuscate your database primary ids, or navigate to the right shard.",
-	"version": "1.0.6.1",
+	"version": "1.0.6.2",
 	"type": "library",
 	"keywords": ["hashids", "hashid", "hash", "ids", "youtube", "bitly", "encrypt", "decrypt", "obfuscate"],
 	"homepage": "https://github.com/arzeth/hashids.hack",
